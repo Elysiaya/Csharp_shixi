@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<InternetKeyListConfig>
+  <key chinesename="中国银行手机银行" webset="APP" username="米小圈" keywords="123456" />
+  <key chinesename="人民医院手机端" webset="APP" username="米小圈" keywords="123" />
+  <key chinesename="招商银行信用卡" webset="http://cc.cmbchina.com/" username="米小圈" keywords="123" />
+  <key chinesename="Zoom视频" webset="客户端" username="米小圈" keywords="2334L6" />
+  <key chinesename="CSDN" webset="https://passport.csdn.net/login?code=public" username="米小圈" keywords="567" />
+  <key chinesename="知网" webset="www.cnki.net" username="米小圈" keywords="455" />
+  <key chinesename="126邮箱" webset="https://mail.126.com/" username="米小圈" keywords="344565" />
+  <key chinesename="CSDN123" webset="https://passport.csdn.net/login?code=public" username="米小圈" keywords="567" />
+</InternetKeyListConfig>

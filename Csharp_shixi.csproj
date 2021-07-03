@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5AFAABC9-E3BE-41A2-9B34-A87C3BF5A581}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Csharp_shixi</RootNamespace>
+    <AssemblyName>Csharp_shixi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Address.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Address.Designer.cs">
+      <DependentUpon>Address.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_date.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_date.Designer.cs">
+      <DependentUpon>add_date.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_form.Designer.cs">
+      <DependentUpon>Main_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NetworkCommunications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NetworkCommunications.Designer.cs">
+      <DependentUpon>NetworkCommunications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Person.cs" />
+    <Compile Include="PersonInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonInformation.Designer.cs">
+      <DependentUpon>PersonInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WebManagement.Designer.cs">
+      <DependentUpon>WebManagement.cs</DependentUpon>
+    </Compile>
+    <Content Include="个人通讯录.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="NetworkCommunications.resx">
+      <DependentUpon>NetworkCommunications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebManagement.resx">
+      <DependentUpon>WebManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Resources\米小圈.jpg" />
+    <EmbeddedResource Include="Address.resx">
+      <DependentUpon>Address.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_date.resx">
+      <DependentUpon>add_date.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_form.resx">
+      <DependentUpon>Main_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonInformation.resx">
+      <DependentUpon>PersonInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Content Include="login.txt" />
+    <EmbeddedResource Include="test.resx">
+      <DependentUpon>test.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ACCESS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\个人信息.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\更新.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\工作台.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\互联网.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\控制台.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\密码.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\日志.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\通讯录.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\退出.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\网站注册信息.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\网址图标.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\文件夹.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\消息传输.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\写入.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\用户密码.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\用户名.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\找不到图像的默认图片.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
