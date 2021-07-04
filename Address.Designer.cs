@@ -38,6 +38,7 @@ namespace Csharp_shixi
             this.删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.更新按钮 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.beizhu = new System.Windows.Forms.TextBox();
@@ -120,6 +121,7 @@ namespace Csharp_shixi
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.更新按钮);
             this.groupBox2.Controls.Add(this.checkBox1);
             this.groupBox2.Controls.Add(this.beizhu);
@@ -144,6 +146,16 @@ namespace Csharp_shixi
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "联系人信息";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(559, 582);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(235, 153);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "导出到EXCEL";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // 更新按钮
             // 
@@ -345,5 +357,6 @@ namespace Csharp_shixi
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 添加ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 删除ToolStripMenuItem;
+        private System.Windows.Forms.Button button1;
     }
 }

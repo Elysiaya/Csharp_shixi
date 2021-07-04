@@ -251,5 +251,23 @@ namespace Csharp_shixi
                 }
             }
         }
+        /// <summary>
+        /// 导出到excel
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            get_peopleslist();
+            using (var s = new System.IO.StreamWriter(@"..\..\TEST.CSV", false, Encoding.UTF8, 30))
+            {
+                s.WriteLine("编号,姓名,性别,关系,单位,联系电话,电子邮件,照片名称,备注");
+                foreach (var item in peoples)
+                {
+                    s.WriteLine($"{item.id},{item.name},{item.sex},{item.relation},{item.company},{item.phone},{item.mail},{item.picture_name},{item.info}");
+                }
+            }
+            MessageBox.Show("导出成功");
+        }
     }
 }
