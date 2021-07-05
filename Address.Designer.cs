@@ -67,8 +67,10 @@ namespace Csharp_shixi
             this.groupBox1.Controls.Add(this.listView1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(325, 1000);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(244, 800);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "通信录分类列表";
@@ -80,9 +82,10 @@ namespace Csharp_shixi
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.HideSelection = false;
             this.listView1.LargeImageList = this.imageList1;
-            this.listView1.Location = new System.Drawing.Point(3, 21);
+            this.listView1.Location = new System.Drawing.Point(2, 16);
+            this.listView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(319, 976);
+            this.listView1.Size = new System.Drawing.Size(240, 782);
             this.listView1.SmallImageList = this.imageList1;
             this.listView1.StateImageList = this.imageList1;
             this.listView1.TabIndex = 0;
@@ -140,18 +143,22 @@ namespace Csharp_shixi
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(325, 0);
+            this.groupBox2.Location = new System.Drawing.Point(244, 0);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(875, 1000);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(656, 800);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "联系人信息";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(559, 582);
+            this.button1.Font = new System.Drawing.Font("宋体", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button1.Location = new System.Drawing.Point(454, 464);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(235, 153);
+            this.button1.Size = new System.Drawing.Size(100, 52);
             this.button1.TabIndex = 17;
             this.button1.Text = "导出到EXCEL";
             this.button1.UseVisualStyleBackColor = true;
@@ -160,9 +167,10 @@ namespace Csharp_shixi
             // 更新按钮
             // 
             this.更新按钮.Enabled = false;
-            this.更新按钮.Location = new System.Drawing.Point(429, 582);
+            this.更新按钮.Location = new System.Drawing.Point(322, 466);
+            this.更新按钮.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.更新按钮.Name = "更新按钮";
-            this.更新按钮.Size = new System.Drawing.Size(124, 65);
+            this.更新按钮.Size = new System.Drawing.Size(93, 52);
             this.更新按钮.TabIndex = 16;
             this.更新按钮.Text = "更新";
             this.更新按钮.UseVisualStyleBackColor = true;
@@ -171,9 +179,10 @@ namespace Csharp_shixi
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(47, 606);
+            this.checkBox1.Location = new System.Drawing.Point(35, 485);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(89, 19);
+            this.checkBox1.Size = new System.Drawing.Size(81, 17);
             this.checkBox1.TabIndex = 15;
             this.checkBox1.Text = "启动编辑";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -181,66 +190,74 @@ namespace Csharp_shixi
             // 
             // beizhu
             // 
-            this.beizhu.Location = new System.Drawing.Point(90, 318);
+            this.beizhu.Location = new System.Drawing.Point(68, 254);
+            this.beizhu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.beizhu.Multiline = true;
             this.beizhu.Name = "beizhu";
             this.beizhu.ReadOnly = true;
-            this.beizhu.Size = new System.Drawing.Size(463, 120);
+            this.beizhu.Size = new System.Drawing.Size(348, 97);
             this.beizhu.TabIndex = 14;
             // 
             // label_relation
             // 
-            this.label_relation.Location = new System.Drawing.Point(90, 271);
+            this.label_relation.Location = new System.Drawing.Point(68, 217);
+            this.label_relation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.label_relation.Name = "label_relation";
             this.label_relation.ReadOnly = true;
-            this.label_relation.Size = new System.Drawing.Size(100, 25);
+            this.label_relation.Size = new System.Drawing.Size(76, 21);
             this.label_relation.TabIndex = 13;
             // 
             // label_company
             // 
-            this.label_company.Location = new System.Drawing.Point(316, 271);
+            this.label_company.Location = new System.Drawing.Point(237, 217);
+            this.label_company.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.label_company.Name = "label_company";
             this.label_company.ReadOnly = true;
-            this.label_company.Size = new System.Drawing.Size(237, 25);
+            this.label_company.Size = new System.Drawing.Size(179, 21);
             this.label_company.TabIndex = 12;
             // 
             // label_Email
             // 
-            this.label_Email.Location = new System.Drawing.Point(316, 225);
+            this.label_Email.Location = new System.Drawing.Point(237, 180);
+            this.label_Email.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.label_Email.Name = "label_Email";
             this.label_Email.ReadOnly = true;
-            this.label_Email.Size = new System.Drawing.Size(237, 25);
+            this.label_Email.Size = new System.Drawing.Size(179, 21);
             this.label_Email.TabIndex = 11;
             // 
             // label_phone
             // 
-            this.label_phone.Location = new System.Drawing.Point(316, 179);
+            this.label_phone.Location = new System.Drawing.Point(237, 143);
+            this.label_phone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.label_phone.Name = "label_phone";
             this.label_phone.ReadOnly = true;
-            this.label_phone.Size = new System.Drawing.Size(237, 25);
+            this.label_phone.Size = new System.Drawing.Size(179, 21);
             this.label_phone.TabIndex = 10;
             // 
             // label_sex
             // 
-            this.label_sex.Location = new System.Drawing.Point(316, 133);
+            this.label_sex.Location = new System.Drawing.Point(237, 106);
+            this.label_sex.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.label_sex.Name = "label_sex";
             this.label_sex.ReadOnly = true;
-            this.label_sex.Size = new System.Drawing.Size(237, 25);
+            this.label_sex.Size = new System.Drawing.Size(179, 21);
             this.label_sex.TabIndex = 9;
             // 
             // label_name
             // 
-            this.label_name.Location = new System.Drawing.Point(316, 87);
+            this.label_name.Location = new System.Drawing.Point(237, 70);
+            this.label_name.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.label_name.Name = "label_name";
             this.label_name.ReadOnly = true;
-            this.label_name.Size = new System.Drawing.Size(237, 25);
+            this.label_name.Size = new System.Drawing.Size(179, 21);
             this.label_name.TabIndex = 8;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(33, 87);
+            this.pictureBox1.Location = new System.Drawing.Point(25, 70);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(157, 156);
+            this.pictureBox1.Size = new System.Drawing.Size(118, 125);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
@@ -249,75 +266,83 @@ namespace Csharp_shixi
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(30, 328);
+            this.label7.Location = new System.Drawing.Point(22, 262);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(37, 15);
+            this.label7.Size = new System.Drawing.Size(33, 13);
             this.label7.TabIndex = 6;
             this.label7.Text = "备注";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(30, 277);
+            this.label6.Location = new System.Drawing.Point(22, 222);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 15);
+            this.label6.Size = new System.Drawing.Size(33, 13);
             this.label6.TabIndex = 5;
             this.label6.Text = "关系";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(228, 274);
+            this.label5.Location = new System.Drawing.Point(171, 219);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 15);
+            this.label5.Size = new System.Drawing.Size(59, 13);
             this.label5.TabIndex = 4;
             this.label5.Text = "工作单位";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(228, 228);
+            this.label4.Location = new System.Drawing.Point(171, 182);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 15);
+            this.label4.Size = new System.Drawing.Size(42, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Email";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(228, 182);
+            this.label3.Location = new System.Drawing.Point(171, 146);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 15);
+            this.label3.Size = new System.Drawing.Size(33, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "手机";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(228, 136);
+            this.label2.Location = new System.Drawing.Point(171, 109);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 15);
+            this.label2.Size = new System.Drawing.Size(33, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "性别";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(228, 90);
+            this.label1.Location = new System.Drawing.Point(171, 72);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 15);
+            this.label1.Size = new System.Drawing.Size(33, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "姓名";
             // 
             // Address
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1200, 1000);
+            this.ClientSize = new System.Drawing.Size(900, 800);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Address";
             this.Text = "Address";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

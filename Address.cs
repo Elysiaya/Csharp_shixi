@@ -259,7 +259,7 @@ namespace Csharp_shixi
         private void button1_Click_1(object sender, EventArgs e)
         {
             get_peopleslist();
-            using (var s = new System.IO.StreamWriter(@"..\..\TEST.CSV", false, Encoding.UTF8, 30))
+            using (var s = new System.IO.StreamWriter(@"..\..\通讯录.CSV", false, Encoding.UTF8, 30))
             {
                 s.WriteLine("编号,姓名,性别,关系,单位,联系电话,电子邮件,照片名称,备注");
                 foreach (var item in peoples)

@@ -124,6 +124,9 @@
   <data name="网址图标" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\网址图标.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="acc852ba54fc196d5293599476a7ab217b0c0b38" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\acc852ba54fc196d5293599476a7ab217b0c0b38.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="用户名" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\用户名.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -133,11 +136,11 @@
   <data name="找不到图像的默认图片" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\找不到图像的默认图片.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="互联网" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\互联网.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="更新" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\更新.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="互联网" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\互联网.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="日志" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\日志.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,6 +169,9 @@
   <data name="用户密码" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\用户密码.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="米小圈" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\米小圈.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ACCESS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ACCESS.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -175,7 +181,7 @@
   <data name="个人信息" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\个人信息.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="米小圈" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\米小圈.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="help" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\help.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

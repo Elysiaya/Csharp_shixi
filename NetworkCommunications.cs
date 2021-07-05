@@ -89,14 +89,17 @@ namespace Csharp_shixi
             TcpClient tcpClient = MyServer.EndAcceptTcpClient(iar);
 
             string data = null;
-            byte[] bytes = new Byte[256];
+            byte[] bytes = new byte[4096];
             NetworkStream networkStream = tcpClient.GetStream();
             while (networkStream.Read(bytes, 0, bytes.Length) != 0)
             {
                 data = System.Text.Encoding.UTF8.GetString(bytes);
                 add_text_to_textbox(data);
+                this.textBox1.Text += "\r\n";
+                bytes = new byte[4096];
             }
             tcpClient.Close();
+
         }
 
         TcpClient client;
@@ -135,7 +138,7 @@ namespace Csharp_shixi
 
         void add_text_to_textbox(string text)
         {
-            this.textBox1.Text += text + "\r\n";
+            this.textBox1.Text += (text + "\r\n");
         }
 
     }

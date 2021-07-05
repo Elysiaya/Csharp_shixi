@@ -31,7 +31,7 @@ namespace Csharp_shixi
             {
                 Web web = new Web();
                 XmlElement xe = (XmlElement)item;
-               
+
 
                 web.keywords = xe.GetAttribute("keywords").ToString();
                 web.username = xe.GetAttribute("username").ToString();
@@ -109,8 +109,8 @@ namespace Csharp_shixi
             {
                 webs.Add(web);
             }
-            
-            
+
+
             this.treeView1.Nodes.Clear();
             set_treeview();
             write_xmldoc();
@@ -148,7 +148,7 @@ namespace Csharp_shixi
 
                 this.textBox5.Text += "编辑已打开\r\n";
             }
-            else if(this.checkBox1.CheckState == CheckState.Unchecked)
+            else if (this.checkBox1.CheckState == CheckState.Unchecked)
             {
                 this.textBox1.ReadOnly = true;
                 this.textBox2.ReadOnly = true;
@@ -162,7 +162,7 @@ namespace Csharp_shixi
         /// 写入xml文件
         /// </summary>
         /// <param name="xml_path"></param>
-        void write_xmldoc(string xml_path=xml_path)
+        void write_xmldoc(string xml_path = xml_path)
         {
             XmlDocument xmldoc = new XmlDocument();
             xmldoc.AppendChild(xmldoc.CreateXmlDeclaration("1.0", "UTF-8", null));
@@ -181,6 +181,24 @@ namespace Csharp_shixi
             }
 
             xmldoc.Save(xml_path);
+        }
+        /// <summary>
+        /// 导出excel
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            using (var s = new System.IO.StreamWriter(@"..\..\网站信息.csv", false, Encoding.UTF8, 30))
+            {
+                s.WriteLine("网站名,网址,用户名,密码");
+                foreach (var item in webs)
+                {
+                    s.WriteLine($"{item.chinesename},{item.webset},{item.username},{item.keywords}");
+                }
+                MessageBox.Show("导出excel完成");
+            }
         }
     }
 

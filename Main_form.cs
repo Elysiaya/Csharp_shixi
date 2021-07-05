@@ -28,7 +28,14 @@ namespace Csharp_shixi
         private void timer1_Tick(object sender, EventArgs e)
         {
             this.toolStripLabel1.Text = name + "欢迎使用本系统" + "当前时间" + DateTime.Now.ToString();
-            this.toolStripLabel2.Text = "当前操作";
+            if (this.ActiveMdiChild != null)
+            {
+                this.toolStripLabel2.Text = "当前操作" + this.ActiveMdiChild.Text;
+            }
+            else
+            {
+                this.toolStripLabel2.Text = "当前操作主窗口";
+            }
 
         }
         Address address = null;
@@ -59,12 +66,28 @@ namespace Csharp_shixi
             webManagement.MdiParent = this;
             webManagement.Show();
         }
-
+        NetworkCommunications networkCommunications = null;
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            NetworkCommunications networkCommunications = new NetworkCommunications();
-            networkCommunications.MdiParent = this;
-            networkCommunications.Show();
+            if (networkCommunications == null)
+            {
+                networkCommunications = new NetworkCommunications();
+                networkCommunications.MdiParent = this;
+                networkCommunications.Show();
+            }
+            else
+            {
+                MessageBox.Show("通信窗口已经打开,请不要重复打开");
+            }
+        }
+        help help = null;
+        private void 帮助ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (help == null)
+            {
+                help = new help();
+                help.Show();
+            }
         }
     }
 }
