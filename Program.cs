@@ -17,6 +17,7 @@ namespace Csharp_shixi
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Main_form("zx"));
+            //Application.Run(new Login());
         }
     }
 }

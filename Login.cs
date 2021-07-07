@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Data.OleDb;
 namespace Csharp_shixi
 {
     public partial class Login : Form
@@ -19,12 +20,18 @@ namespace Csharp_shixi
         public Login()
         {
             InitializeComponent();
-            StreamReader sr = new StreamReader(@"C:\Users\zerof\source\repos\Csharp_shixi\login.txt");
-            string text = sr.ReadToEnd();
-            username = text.Split(';')[0];
-            passwd = text.Split(';')[1];
-            name = text.Split(';')[2];
-            sr.Close();
+
+            string conn_str = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\..\个人通讯录.mdb;Persist Security Info=True";
+            OleDbConnection oleDbConnection = new OleDbConnection(conn_str);
+            oleDbConnection.Open();
+            string sql = "select username,password from personinfo";
+            OleDbCommand oleDbCommand = new OleDbCommand(sql, oleDbConnection);
+            OleDbDataReader oleDbDataReader = oleDbCommand.ExecuteReader();
+            oleDbDataReader.Read();
+            username = (string)oleDbDataReader["username"];
+            passwd = (string)oleDbDataReader["password"];
+            oleDbDataReader.Close();
+            oleDbConnection.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
