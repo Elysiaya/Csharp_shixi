@@ -27,7 +27,11 @@ namespace Csharp_shixi
         {
             string connstring = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\..\个人通讯录.mdb";
             oleDbConnection = new OleDbConnection(connstring);
-            oleDbConnection.Open();
+
+            if (oleDbConnection.State == ConnectionState.Closed)
+            {
+                oleDbConnection.Open();
+            }
             //从数据库中获取所有关系保存在list_relation中
             get_relation();
             //get_peopleslist();

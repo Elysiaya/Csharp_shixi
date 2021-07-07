@@ -15,6 +15,7 @@ namespace Csharp_shixi
     public partial class PersonInformation : Form
     {
         OleDbConnection oleDbConnection;
+        byte[] bytes;
         public PersonInformation()
         {
             InitializeComponent();
@@ -30,7 +31,10 @@ namespace Csharp_shixi
 
             string conn_str = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\..\个人通讯录.mdb;Persist Security Info=True";
             oleDbConnection = new OleDbConnection(conn_str);
-            oleDbConnection.Open();
+            if (oleDbConnection.State == ConnectionState.Closed)
+            {
+                oleDbConnection.Open();
+            }
             string sql = "select * from personinfo";
             OleDbCommand oleDbCommand = new OleDbCommand(sql, oleDbConnection);
             OleDbDataReader dr = oleDbCommand.ExecuteReader();
@@ -55,15 +59,31 @@ namespace Csharp_shixi
             //备注
             this.textBox5.Text = (string)dr[9];
             //图片
-
+            bytes = (byte[])dr[10];
+            MemoryStream memoryStream = new MemoryStream(bytes);
+            this.pictureBox3.Image = Image.FromStream(memoryStream);
+            dr.Close();
+            
         }
-
+        /// <summary>
+        /// 写入数据库
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
-            string sql = $"update personinfo set [username]=\'{this.textBox1.Text}\',[password]=\'{this.textBox2.Text}\',[姓名]=\'{this.textBox3.Text}\',[性别]=\'{this.comboBox1.SelectedItem.ToString()}\',[出生日期]=\"{this.dateTimePicker1.Value.ToString()}\",[班级]=\'{this.textBox6.Text}\',[学号]=\'{this.textBox4.Text}\',[电话]=\'{this.textBox8.Text}\',[备注]=\'{this.textBox5.Text}\' where [ID]=1;";
-            OleDbCommand oleDbCommand = new OleDbCommand(sql, oleDbConnection);
-            int x = oleDbCommand.ExecuteNonQuery();
-            MessageBox.Show("更新成功");
+            try
+            {
+                string sql = $"update personinfo set [username]=\'{this.textBox1.Text}\',[password]=\'{this.textBox2.Text}\',[姓名]=\'{this.textBox3.Text}\',[性别]=\'{this.comboBox1.SelectedItem.ToString()}\',[出生日期]=\"{this.dateTimePicker1.Value.ToString()}\",[班级]=\'{this.textBox6.Text}\',[学号]=\'{this.textBox4.Text}\',[电话]=\'{this.textBox8.Text}\',[备注]=\'{this.textBox5.Text}\',[图片]=@bytes where [ID]=1;";
+                OleDbCommand oleDbCommand = new OleDbCommand(sql, oleDbConnection);
+                oleDbCommand.Parameters.Add("@bytes", OleDbType.Binary, bytes.Length).Value = bytes;
+                int x = oleDbCommand.ExecuteNonQuery();
+                MessageBox.Show("更新成功");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -76,8 +96,16 @@ namespace Csharp_shixi
             {
                 try
                 {
+                    FileStream fileStream = new FileStream(file.FileName, FileMode.Open);
+                    bytes = new byte[fileStream.Length];
+                    fileStream.Read(bytes, 0, (int)fileStream.Length);
+
+                    fileStream.Close();
+                    fileStream.Dispose();
+
                     Image image = Image.FromFile(file.FileName);
                     this.pictureBox3.Image = image;
+                    
                 }
                 catch (Exception ex)
                 {
